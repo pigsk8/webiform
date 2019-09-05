@@ -55,6 +55,13 @@ class MainForm extends Component {
         } )
     }
 
+    handleInputs(input, value) {
+        this.setState( {
+            [input]: value
+        } );
+        console.log(this.state);
+    }
+
     handleChange = input => event => {
 
         const value = event.target.type === 'checkbox' ? event.target.checked : event.target.value;
@@ -69,8 +76,8 @@ class MainForm extends Component {
 
     render() {
         const { step } = this.state;
-        // const { type, instagram, facebook, twitter, youtube, linkedin, others, pub, followers, chat, dm, whatsapp, design, ads, name, phone, company, email, comments } = this.state;
-        // const values = { type, instagram, facebook, twitter, youtube, linkedin, others, pub, followers, chat, dm, whatsapp, design, ads, name, phone, company, email, comments };
+        // const { type, instagram, facebook, twitter, youtube, linkedin, otros, pub, followers, chat, dm, whatsapp, design, ads, name, phone, company, email, comments } = this.state;
+        // const values = { type, instagram, facebook, twitter, youtube, linkedin, otros, pub, followers, chat, dm, whatsapp, design, ads, name, phone, company, email, comments };
         const values = this.state;
         switch ( step ) {
             case 1:
@@ -78,6 +85,7 @@ class MainForm extends Component {
                     nextStep={this.nextStep}
                     handleChange={this.handleChange}
                     values={values}
+                    hableInputs={this.handleInputs}
                 />
             case 2:
                 return <SocialNetwork

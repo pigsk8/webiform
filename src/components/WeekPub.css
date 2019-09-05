@@ -1,0 +1,53 @@
+.FormWeekPub input[type="radio"]:checked+label>img,
+.FormWeekPub input[type="checkbox"]:checked+label>img,
+.FormWeekPub input[type="radio"]:checked+label>div img,
+.FormWeekPub input[type="checkbox"]:checked+label>div img {
+    /* background-color: green; */
+    /* border: 5px green solid; */
+    border-radius: 50%;
+    background-color: green;
+}
+
+.FormWeekPub .imgPub {
+    width: 200px;
+}
+
+.FormWeekPub .items-pub .label-container img {
+    width: 50px;
+}
+
+.FormWeekPub .items-pub{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.FormWeekPub .WeekPub {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+.FormWeekPub .items-pub .first-group-pub, .second-group-pub{
+    display: flex;
+}
+
+@media screen and (min-width: 600px) {
+    .FormWeekPub .imgPub {
+        width: 300px;
+    }
+    .FormWeekPub .items-pub .label-container img {
+        width: 100px;
+    }
+    .FormWeekPub .WeekPub {
+        flex-direction: row;
+    }
+    .FormWeekPub .items-pub{
+        flex-direction: row;
+    }
+    .FormWeekPub .items-pub .first-group-pub, .second-group-pub{
+        flex-direction: column;
+    }
+
+}

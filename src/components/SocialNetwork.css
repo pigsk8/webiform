@@ -1,0 +1,56 @@
+.ContainerSocial .ItemSocial {
+    margin-bottom: 20px;
+}
+
+/* .ContainerSocial .ItemSocial:last-child {
+    margin-bottom: 0px;
+} */
+
+.ItemSocial img {
+    width: 70px;
+    margin: 0 5px;
+}
+
+.ItemSocial label .name {
+    font-size: 20px;
+}
+
+.ContainerSocial div.button-check {
+    height: 13px;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.ItemSocial .label-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ContainerSocial .GroupItems.FirstGroup .ItemSocial:nth-child(even) .label-container  {
+    flex-direction: row-reverse;
+}
+
+.ContainerSocial .GroupItems.SecondGroup .ItemSocial:nth-child(odd) .label-container  {
+    flex-direction: row-reverse;
+}
+
+@media screen and (min-width: 600px) {
+    .ContainerSocial .SocialItems {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .ContainerSocial .GroupItems {
+        width: 50%;
+    }
+
+    .ContainerSocial .GroupItems.FirstGroup .ItemSocial:nth-child(even) .label-container,
+    .ContainerSocial .GroupItems.SecondGroup .ItemSocial:nth-child(odd) .label-container  {
+        flex-direction: row;
+    }
+    .ItemSocial img {
+        width: 100px;
+        margin: 0 10px;
+    }
+}

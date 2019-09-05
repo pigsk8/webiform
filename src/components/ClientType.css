@@ -1,0 +1,45 @@
+.FormClientType img {
+    width: 200px;
+}
+
+.FormClientType .ClientType {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.FormClientType .underline {
+    position: relative;
+    margin: 3px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.FormClientType .underline:after {
+    content: '';
+    position: absolute;
+    left: -6px;
+    bottom: -8px;
+    height: 2px;
+    background-color: #fff;
+    width: 110%;
+}
+
+.FormClientType .divider-type {
+    color: white;
+    height: 3px;
+    background-color: white;
+    border: none;
+    width: 100%;
+}
+
+@media screen and (min-width: 600px) {
+    .FormClientType .ClientType {
+        flex-direction: row;
+    }
+
+    .FormClientType .divider-type {
+        display: none;
+    }
+}

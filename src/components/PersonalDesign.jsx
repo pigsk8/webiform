@@ -1,5 +1,9 @@
 // UserDetails.jsx
 import React, { Component } from 'react';
+import './InlineDesign.css';
+import imgDesign from '../images/dise_C3_B1o-de-perfil.png';
+import bno from '../images/BotonN.png';
+import byes from '../images/BotonY.png';
 
 class PersonalDesign extends Component {
 
@@ -16,28 +20,39 @@ class PersonalDesign extends Component {
     render() {
         const { values } = this.props;
         return (
-            <form >
+            <form className="FormInside FormInline">
                 <h2>Diseño Perfil</h2>
-                <div className="ContainerFieldsInline">
+                <section className="InlineContainer">
+                    <img src={imgDesign} alt="" className="imgInline"/>
 
-                    <p>         
-                        <input id="design-si" type="radio" value="SI"
-                            checked={values.design === "SI"}
-                            onChange={this.props.handleChange( 'design' )}
-                        />
-                        <label for="design-si">SI</label>
-                    </p>
-                    <p>
-                        <input id="design-no" type="radio" value="NO"
-                            checked={values.design === "NO"}
-                            onChange={this.props.handleChange( 'design' )} />
-                        <label for="design-no">NO</label>
-                    </p>
+                    <div className="FieldsInline">
 
+                        <div>
+                            <input id="design-si" type="radio" value="SI"
+                                checked={values.design === "SI"}
+                                onChange={this.props.handleChange( 'design' )}
+                            />
+                            <label htmlFor="design-si" className="label-container pointer">
+                                    <img src={byes} alt="" />
+                            </label>
+                        </div>
+
+                        <div>
+                            <input id="design-no" type="radio" value="NO"
+                                checked={values.design === "NO"}
+                                onChange={this.props.handleChange( 'design' )} />
+                            <label htmlFor="design-no" className="label-container pointer">
+                                <img src={bno} alt="" />
+                            </label>
+                        </div>
+
+                    </div>
+
+                </section>
+                <div>
+                    <button onClick={this.back}>Back</button>
+                    <button onClick={this.saveAndContinue}>Siguiente </button>
                 </div>
-
-                <button onClick={this.back}>Back</button>
-                <button onClick={this.saveAndContinue}>Siguiente </button>
             </form>
         )
     }

@@ -1,7 +1,11 @@
 
 // UserDetails.jsx
 import React, { Component } from 'react';
-
+import './InlineDesign.css';
+import imgClient from '../images/atencion-al-cliente.png';
+import bchat from '../images/BotonChat.png';
+import bdm from '../images/BotonDM.png';
+import bwhatsapp from '../images/BotonWhatsapp.png';
 class PersonalAttention extends Component {
 
     saveAndContinue = ( e ) => {
@@ -17,37 +21,54 @@ class PersonalAttention extends Component {
     render() {
         const { values } = this.props;
         return (
-            <form >
+            <form className="FormInside FormInline" >
                 <h2>Atención a Personas</h2>
-                <div className="ContainerFieldsInline">
-                    <p>
-                        <input
-                            id="chat"
-                            type="checkbox"
-                            checked={values.chat}
-                            onChange={this.props.handleChange( 'chat' )} />
-                        <label for="chat">CHAT</label>
-                    </p>              
-                    <p>
-                        <input
-                            id="dm"
-                            type="checkbox"
-                            checked={values.dm}
-                            onChange={this.props.handleChange( 'dm' )} />
-                        <label for="dm">DM</label>
-                    </p>   
-                    <p>
-                        <input
-                            id="whatsapp"
-                            type="checkbox"
-                            checked={values.whatsapp}
-                            onChange={this.props.handleChange( 'whatsapp' )} />
-                        <label for="whatsapp">WHATSAPP</label>
-                    </p>  
+                <section className="InlineContainer">
+                    <img src={imgClient} alt="" className="imgInline"/>
+                    <div className="FieldsInline">
 
+                        <div>
+                            <input
+                                id="chat"
+                                type="checkbox"
+                                checked={values.chat}
+                                onChange={this.props.handleChange( 'chat' )} />
+                            <label htmlFor="chat" className="label-container pointer">
+                                <img src={bchat} alt="" />
+                            </label>
+                        </div>
+
+                        <div>
+                            <input
+                                id="dm"
+                                type="checkbox"
+                                checked={values.dm}
+                                onChange={this.props.handleChange( 'dm' )} />
+                            <label htmlFor="dm" className="label-container pointer">
+                                <img src={bdm} alt="" />
+                            </label>
+                        </div>
+
+                        <div>
+                            <input
+                                id="whatsapp"
+                                type="checkbox"
+                                checked={values.whatsapp}
+                                onChange={this.props.handleChange( 'whatsapp' )} />
+                            <label htmlFor="whatsapp" className="label-container pointer">
+                                <img src={bwhatsapp} alt="" />
+                            </label>
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <div>
+                    <button onClick={this.back}>Back</button>
+                    <button onClick={this.saveAndContinue}>Siguiente </button>
                 </div>
-                <button onClick={this.back}>Back</button>
-                <button onClick={this.saveAndContinue}>Siguiente </button>
+
             </form>
         )
     }

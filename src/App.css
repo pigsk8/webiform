@@ -1,7 +1,80 @@
+@font-face {
+    font-family: 'Big John';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/BIG-JOHN.otf');
+}
+
+html,
+body,
+p,
+label,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li {
+    color: white;
+    font-family: 'Big John';
+    letter-spacing: 1px;
+    font-weight: normal;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-image: linear-gradient(to right top, #1500ff, #004eff, #0072ff, #008eff, #00a7ff, #00acff, #00b1ff, #00b6ff, #00aaff, #6995ff, #b971ff, #fe1aff);
+}
+
+@media screen and (min-width: 600px){
+    body{
+        background-image: linear-gradient(to right bottom, #fe1aff, #c367ff, #8387ff, #439aff, #1aa5ff, #0fa0ff, #049cff, #0097ff, #0080ff, #0067ff, #0046ff, #1500ff);
+    }
+}
+
+#webiform {
+    height: 100%;
+}
+
 .FormContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    max-width: 600px;
+    max-width: 750px;
     margin: 0 auto;
+    height: 100%;
+    padding: 20px;
+}
+.FormContainer .pointer{
+    cursor: pointer;
+}
+.FormContainer .FormInside{
+    width: 100%;
+}
+
+.FormContainer .button-check {
+    width: 40px;
+    border-radius: 20px;
+    height: 15px;
+    background: gray;
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    /* border: 3px solid gray; */
+}
+
+.FormContainer input[type="radio"]:checked+label>.button-check,
+.FormContainer input[type="checkbox"]:checked+label>.button-check,
+.FormContainer input[type="radio"]:checked+label>div .button-check,
+.FormContainer input[type="checkbox"]:checked+label>div .button-check {
+    background-color: green;
+    /* border-color: green; */
 }
 
 .FormContainer .ContainerFieldsInline {
@@ -11,7 +84,7 @@
     flex-wrap: wrap;
 }
 
-.FormContainer .ContainerFieldsInline input[type="radio"]+label,
+/* .FormContainer .ContainerFieldsInline input[type="radio"]+label,
 .FormContainer .ContainerFieldsInline input[type="checkbox"]+label {
     padding: 8px;
     border: 1px solid black;
@@ -19,16 +92,16 @@
 }
 
 
-.FormContainer .ContainerFieldsInline input[type="radio"]:checked+label,
-.FormContainer .ContainerFieldsInline input[type="checkbox"]:checked+label {
+.FormContainer input[type="radio"]:checked+label,
+.FormContainer input[type="checkbox"]:checked+label {
     background-color: gray;
-}
+} */
 
-.FormContainer .ContainerFieldsInline input[type="radio"],
-.FormContainer .ContainerFieldsInline input[type="checkbox"]{
+.FormContainer input[type="radio"],
+.FormContainer input[type="checkbox"] {
     display: none;
 }
 
-.UserDetail > div{
+.UserDetail>div {
     margin: 10px;
 }
