@@ -32,6 +32,17 @@
     background-color: white;
     border: none;
     width: 100%;
+    margin: 15px 0;
+}
+
+.FormClientType .img-container{
+    margin-top: 15px;
+}
+.FormClientType .option-check{
+    padding: 15px;
+    border-radius: 10px;
+    max-width: 300px;
+    margin: 0 auto;
 }
 
 @media screen and (min-width: 600px) {

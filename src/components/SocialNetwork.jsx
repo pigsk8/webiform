@@ -26,7 +26,7 @@ class SocialNetwork extends Component {
             <form className="FormInside FormSocialNetwork">
                 {/* <h2>Redes</h2> */}
                 <div className="ContainerSocial">
-                    <h2>Redes Sociales</h2>
+                    <h2>¿CUALES REDES SOCIALES QUIERES ADMINISTRAR?</h2>
                     <section className="SocialItems">
                         <div className="GroupItems FirstGroup">
                             <div className="ItemSocial">
@@ -131,8 +131,10 @@ class SocialNetwork extends Component {
                     </section>
                 </div>
 
-                <button onClick={this.back}>Back</button>
-                <button onClick={this.saveAndContinue}>Siguiente </button>
+                <div className="btn-container">
+                    <button onClick={this.back} className="btn-both btn-prev">Anterior</button>
+                    <button onClick={this.saveAndContinue} className="btn-both btn-next">Siguiente</button>
+                </div>
             </form>
         )
     }

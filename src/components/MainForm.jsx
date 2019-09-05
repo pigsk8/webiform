@@ -55,13 +55,6 @@ class MainForm extends Component {
         } )
     }
 
-    handleInputs(input, value) {
-        this.setState( {
-            [input]: value
-        } );
-        console.log(this.state);
-    }
-
     handleChange = input => event => {
 
         const value = event.target.type === 'checkbox' ? event.target.checked : event.target.value;

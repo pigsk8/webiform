@@ -56,8 +56,10 @@ class UserDetails extends Component{
                         </textarea>
                     </div>
                 </div>
-                <button onClick={this.back}>Back</button>
-                <button onClick={this.finish}>Enviar</button>
+                <div className="btn-container">
+                    <button onClick={this.back} className="btn-both btn-prev">Anterior</button>
+                    <button onClick={this.finish} className="btn-both btn-next">Enviar</button>
+                </div>
             </form>
         )
     }

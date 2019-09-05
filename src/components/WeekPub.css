@@ -2,10 +2,8 @@
 .FormWeekPub input[type="checkbox"]:checked+label>img,
 .FormWeekPub input[type="radio"]:checked+label>div img,
 .FormWeekPub input[type="checkbox"]:checked+label>div img {
-    /* background-color: green; */
-    /* border: 5px green solid; */
     border-radius: 50%;
-    background-color: green;
+    background-color:#9C27B0;
 }
 
 .FormWeekPub .imgPub {

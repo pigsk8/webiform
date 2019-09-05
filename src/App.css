@@ -18,7 +18,8 @@ h5,
 h6,
 ul,
 ol,
-li {
+li,
+button {
     color: white;
     font-family: 'Big John';
     letter-spacing: 1px;
@@ -31,8 +32,8 @@ body {
     background-image: linear-gradient(to right top, #1500ff, #004eff, #0072ff, #008eff, #00a7ff, #00acff, #00b1ff, #00b6ff, #00aaff, #6995ff, #b971ff, #fe1aff);
 }
 
-@media screen and (min-width: 600px){
-    body{
+@media screen and (min-width: 600px) {
+    body {
         background-image: linear-gradient(to right bottom, #fe1aff, #c367ff, #8387ff, #439aff, #1aa5ff, #0fa0ff, #049cff, #0097ff, #0080ff, #0067ff, #0046ff, #1500ff);
     }
 }
@@ -51,10 +52,12 @@ body {
     height: 100%;
     padding: 20px;
 }
-.FormContainer .pointer{
+
+.FormContainer .pointer {
     cursor: pointer;
 }
-.FormContainer .FormInside{
+
+.FormContainer .FormInside {
     width: 100%;
 }
 
@@ -67,6 +70,45 @@ body {
     margin-top: 15px;
     margin-bottom: 10px;
     /* border: 3px solid gray; */
+}
+
+.FormContainer .option-checked {
+    -webkit-box-shadow: 0px 0px 30px #e91e63;
+    -moz-box-shadow: 0px 0px 30px #e91e63;
+    box-shadow: 0px 0px 30px #e91e63;
+}
+
+.FormContainer .btn-container {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.FormContainer .btn-container.btn-only {
+    justify-content: center;
+}
+
+.FormContainer .btn-both {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.FormContainer .btn-next {
+    background: #8e24aa;
+    background: -webkit-linear-gradient(45deg, #8e24aa, #ff6e40) !important;
+    background: -moz- oldlinear-gradient(45deg, #8e24aa, #ff6e40) !important;
+    background: -o-linear-gradient(45deg, #8e24aa, #ff6e40) !important;
+    background: linear-gradient(45deg, #8e24aa, #ff6e40) !important;
+}
+
+.FormContainer .btn-prev {
+    background: #ff5252;
+    background: -webkit-linear-gradient(45deg, #ff5252, #f48fb1) !important;
+    background: -moz- oldlinear-gradient(45deg, #ff5252, #f48fb1) !important;
+    background: -o-linear-gradient(45deg, #ff5252, #f48fb1) !important;
+    background: linear-gradient(45deg, #ff5252, #f48fb1) !important;
 }
 
 .FormContainer input[type="radio"]:checked+label>.button-check,

@@ -22,7 +22,7 @@ class PersonalAttention extends Component {
         const { values } = this.props;
         return (
             <form className="FormInside FormInline" >
-                <h2>Atención a Personas</h2>
+                <h2>Atencion a Personas</h2>
                 <section className="InlineContainer">
                     <img src={imgClient} alt="" className="imgInline"/>
                     <div className="FieldsInline">
@@ -64,9 +64,9 @@ class PersonalAttention extends Component {
 
                 </section>
 
-                <div>
-                    <button onClick={this.back}>Back</button>
-                    <button onClick={this.saveAndContinue}>Siguiente </button>
+                <div className="btn-container">
+                    <button onClick={this.back} className="btn-both btn-prev">Anterior</button>
+                    <button onClick={this.saveAndContinue} className="btn-both btn-next">Siguiente</button>
                 </div>
 
             </form>

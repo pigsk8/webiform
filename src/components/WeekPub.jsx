@@ -100,9 +100,9 @@ class WeekPub extends Component {
                     </div>
                 </section>
 
-                <div>
-                    <button onClick={this.back}>Back</button>
-                    <button onClick={this.saveAndContinue}>Siguiente </button>
+                <div className="btn-container">
+                    <button onClick={this.back} className="btn-both btn-prev">Anterior</button>
+                    <button onClick={this.saveAndContinue} className="btn-both btn-next">Siguiente</button>
                 </div>
             </form>
         )
