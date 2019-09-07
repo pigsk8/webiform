@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import './UserDetail.css';
 class UserDetails extends Component{
 
     back = ( e ) => {
@@ -8,21 +8,36 @@ class UserDetails extends Component{
     }
 
     finish = (e) => {
+
+        if (this.props.values.btndisable) {
+            return;
+        }
+
         e.preventDefault();
+        const warn = document.getElementById('warn-msg');
+        
+        if (this.props.values.name === ''){
+            warn.innerHTML = '<p>El nombre es obligatorio</p>';
+            return;
+        }
+        if (this.props.values.email === ''){
+            warn.innerHTML = '<p>El Email es obligatorio</p>';
+            return;
+        }
+        
         this.props.submit();        
     }
 
     render(){
         const { values } = this.props;
         return(
-            <form >
+            <form className="FormInside FormUser">
                 <h2>Tus Datos</h2>
                 <div className="UserDetail">
 
-
-                    <div>
+                    <div className="input-container">
                         <input
-                        placeholder='Nombre'
+                        placeholder='Nombre*'
                         onChange={this.props.handleChange('name')}
                         defaultValue={values.name}
                         />
@@ -33,7 +48,7 @@ class UserDetails extends Component{
                         defaultValue={values.phone}
                         />
                     </div>
-                    <div>
+                    <div className="input-container">
                         <input
                         placeholder='Empresa'
                         onChange={this.props.handleChange('company')}
@@ -42,12 +57,12 @@ class UserDetails extends Component{
 
                         <input
                         type='email'
-                        placeholder='Email'
+                        placeholder='Email*'
                         onChange={this.props.handleChange('email')}
                         defaultValue={values.email}
                         />
                     </div>
-                    <div>
+                    <div className="input-container">
                         <textarea
                         placeholder='Comentarios'
                         onChange={this.props.handleChange('comments')}
@@ -56,9 +71,14 @@ class UserDetails extends Component{
                         </textarea>
                     </div>
                 </div>
+                <div className="warning">
+                    <div id="warn-msg">
+
+                    </div>
+                </div>
                 <div className="btn-container">
                     <button onClick={this.back} className="btn-both btn-prev">Anterior</button>
-                    <button onClick={this.finish} className="btn-both btn-next">Enviar</button>
+                    <button onClick={this.finish} className="btn-both btn-next" disabled={values.btndisable}>{values.btndisable ? 'Enviando...' : 'Enviar'}</button>
                 </div>
             </form>
         )

@@ -1,0 +1,72 @@
+.FormUser .UserDetail {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.FormUser .UserDetail .input-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.FormUser .UserDetail .input-container>input,
+.FormUser .UserDetail .input-container>textarea {
+    margin: 10px 0;
+}
+
+.FormUser input,
+.FormUser textarea {
+    padding: 8px 10px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid rgb(211, 211, 211);
+}
+
+.FormUser textarea {
+    width: 100%;
+    height: 150px;
+    overflow: auto;
+    resize: none;
+}
+
+.FormUser input:focus,
+.FormUser textarea:focus {
+    border: 1px solid white;
+}
+
+.FormUser input::placeholder,
+.FormUser textarea::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgb(236, 236, 236);
+    opacity: 1;
+    /* Firefox */
+}
+
+.FormUser input:-ms-input-placeholder,
+.FormUser textarea:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: rgb(236, 236, 236);
+}
+
+.FormUser input::-ms-input-placeholder,
+.FormUser textarea::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: rgb(236, 236, 236);
+}
+
+/* Change Autocomplete styles in Chrome*/
+.FormUser input:-webkit-autofill,
+.FormUser input:-webkit-autofill:hover,
+.FormUser input:-webkit-autofill:focus,
+.FormUser textarea:-webkit-autofill,
+.FormUser textarea:-webkit-autofill:hover,
+.FormUser textarea:-webkit-autofill:focus,
+.FormUser select:-webkit-autofill,
+.FormUser select:-webkit-autofill:hover,
+.FormUser select:-webkit-autofill:focus {
+    border: 1px solid white;
+    -webkit-text-fill-color: rgb(255, 255, 255);
+    -webkit-box-shadow: 0 0 0px 1000px rgba(0, 0, 0, 0) inset;
+    background-color: transparent !important;
+    transition: background-color 5000s ease-in-out 0s;
+}

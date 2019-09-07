@@ -19,7 +19,9 @@ h6,
 ul,
 ol,
 li,
-button {
+button,
+input,
+textarea {
     color: white;
     font-family: 'Big John';
     letter-spacing: 1px;
@@ -42,7 +44,7 @@ body {
     height: 100%;
 }
 
-.FormContainer {
+#FormContainer {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -53,15 +55,15 @@ body {
     padding: 20px;
 }
 
-.FormContainer .pointer {
+#FormContainer .pointer {
     cursor: pointer;
 }
 
-.FormContainer .FormInside {
+#FormContainer .FormInside {
     width: 100%;
 }
 
-.FormContainer .button-check {
+#FormContainer .button-check {
     width: 40px;
     border-radius: 20px;
     height: 15px;
@@ -72,30 +74,30 @@ body {
     /* border: 3px solid gray; */
 }
 
-.FormContainer .option-checked {
+#FormContainer .option-checked {
     -webkit-box-shadow: 0px 0px 30px #e91e63;
     -moz-box-shadow: 0px 0px 30px #e91e63;
     box-shadow: 0px 0px 30px #e91e63;
 }
 
-.FormContainer .btn-container {
+#FormContainer .btn-container {
     margin-top: 40px;
     display: flex;
     justify-content: space-between;
 }
 
-.FormContainer .btn-container.btn-only {
+#FormContainer .btn-container.btn-only {
     justify-content: center;
 }
 
-.FormContainer .btn-both {
+#FormContainer .btn-both {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
-.FormContainer .btn-next {
+#FormContainer .btn-next {
     background: #8e24aa;
     background: -webkit-linear-gradient(45deg, #8e24aa, #ff6e40) !important;
     background: -moz- oldlinear-gradient(45deg, #8e24aa, #ff6e40) !important;
@@ -103,7 +105,7 @@ body {
     background: linear-gradient(45deg, #8e24aa, #ff6e40) !important;
 }
 
-.FormContainer .btn-prev {
+#FormContainer .btn-prev {
     background: #ff5252;
     background: -webkit-linear-gradient(45deg, #ff5252, #f48fb1) !important;
     background: -moz- oldlinear-gradient(45deg, #ff5252, #f48fb1) !important;
@@ -111,36 +113,36 @@ body {
     background: linear-gradient(45deg, #ff5252, #f48fb1) !important;
 }
 
-.FormContainer input[type="radio"]:checked+label>.button-check,
-.FormContainer input[type="checkbox"]:checked+label>.button-check,
-.FormContainer input[type="radio"]:checked+label>div .button-check,
-.FormContainer input[type="checkbox"]:checked+label>div .button-check {
+#FormContainer input[type="radio"]:checked+label>.button-check,
+#FormContainer input[type="checkbox"]:checked+label>.button-check,
+#FormContainer input[type="radio"]:checked+label>div .button-check,
+#FormContainer input[type="checkbox"]:checked+label>div .button-check {
     background-color: green;
     /* border-color: green; */
 }
 
-.FormContainer .ContainerFieldsInline {
+#FormContainer .ContainerFieldsInline {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
     flex-wrap: wrap;
 }
 
-/* .FormContainer .ContainerFieldsInline input[type="radio"]+label,
-.FormContainer .ContainerFieldsInline input[type="checkbox"]+label {
+/* #FormContainer .ContainerFieldsInline input[type="radio"]+label,
+#FormContainer .ContainerFieldsInline input[type="checkbox"]+label {
     padding: 8px;
     border: 1px solid black;
     margin: 0 15px;
 }
 
 
-.FormContainer input[type="radio"]:checked+label,
-.FormContainer input[type="checkbox"]:checked+label {
+#FormContainer input[type="radio"]:checked+label,
+#FormContainer input[type="checkbox"]:checked+label {
     background-color: gray;
 } */
 
-.FormContainer input[type="radio"],
-.FormContainer input[type="checkbox"] {
+#FormContainer input[type="radio"],
+#FormContainer input[type="checkbox"] {
     display: none;
 }
 

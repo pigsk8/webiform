@@ -14,11 +14,6 @@ class ClientType extends Component {
             console.log('debe llenar');
     }
 
-    optionChecked = () => {
-
-        // console.log(option.checked);
-    }
-
     componentDidMount = () => {
         const option = document.getElementById('label-persona');
         const divPa = option.parentNode;
@@ -35,7 +30,7 @@ class ClientType extends Component {
             divPa2.classList.remove('option-checked');
     }
 
-    componentDidUpdate = () => {
+    componentDidUpdate = (prevProps, prevState, snapshot) => {
         const option = document.getElementById('label-persona');
         const divPa = option.parentNode;
         if (option.checked) 
